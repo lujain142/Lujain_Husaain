@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+/* start of preloader styles */
+#preloader
+{
+  background: #000 url(./images/preloader.gif) no-repeat center;
+  background-size: 20%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+/* end of preloader styles */
+/* start of global styles */
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kalam', cursive;
+}
+section
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+/* end of global styles */
+/* start of the header styles */
+header
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo
+{
+  position: relative;
+  max-width: 80px;
+}
+header ul
+{
+  position: relative;
+  display: flex;
+}
+header ul li
+{
+  list-style: none;
+}
+header ul li a 
+{
+  display: inline-block;
+  color: #333;
+  font-weight: 400;
+  margin-left: 40px;
+  /* text-decoration: none; */
+}
+/* end of the header styles */
+/* start of the content section styling */
+.content
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .textBox
+{
+  position: relative;
+  max-width: 600px;
+}
+.content .textBox h2
+{
+  color: #333;
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+.content .textBox h2 span
+{
+  color: #365080;
+  font-size: 1.2em;
+  font-weight: 900;
+}
+.content .textBox p
+{
+  color: #333;
+}
+.content .textBox a
+{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background:#365080;
+  color: #fff;
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.content .imgBox
+{
+  width: 600px;
+  display: flex;
+  justify-content:flex-start;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+.content .imgBox img
+{
+  max-width: 340px;
+}
+/* end of the content section container styling */
+
+/* start of styling for the circular background */
+.circle
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #365080;
+  clip-path: circle(600px at right 800px);
+}
+/* end of styling for the circular background */
+
+/* styles for the footer */
+/* this style settings put the footer ABSOLUTELY to the bottom and center */
+footer
+{
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  transform: translateX(-50%);
+}
+/* end of footer styles */
+
+/* .sci li a:hover
+{
+  filter: invert(-1);
+} */
+
+/* start of vibration on hover styles */
+/* .content .textBox a:hover, .sci li a:hover
+{
+  animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+} */
+@keyframes shake 
+{
+  10%, 90%
+  {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80%
+  {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70%
+  {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%, 60%
+  {
+    transform: translate3d(2px, 0, 0);
+  }
+}
+/* end of vibration on hover styles */
+
+/* start of responsive design styles */
+/* start of responsive styles */
+@media (max-width: 991px)
+{
+  section
+  {
+    padding: 20px 20px 120px;
+    /* padding-bottom: 140px; */
+  }
+  header
+  {
+    padding: 20px;
+  }
+  header .logo
+  {
+    /* position: relative; */
+    max-width: 60px;
+  }
+  header ul
+  {
+    display: none;
+  }
+
+  .toggle
+  {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: url(./images/menu.png);
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    z-index: 6;
+    cursor: pointer;
+    filter: invert(-1);
+  }
+  .toggle.active
+  {
+    background: url(./images/close.png);
+    background-position: center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+  }
+  .content
+  {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+
+  .content .textBox
+  {
+    position: relative;
+    max-width: 100%;
+    padding-right: 20px;
+  }
+
+  .content .textBox h2 
+  {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+
+  .circle
+  {
+    clip-path: circle(400px at center bottom);
+  }
+
+  .content .imgBox
+  {
+    max-width: 100%;
+    justify-content: center;
+  }
+  .content .imgBox img 
+  {
+    max-width: 280px;
+  }
+
+  .sci
+  {
+    right: 0;
+    width: 50px;
+    background: #365080;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  header ul.navigation.active
+  {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    z-index: 5;
+  }
+}
+/* end of responsive desin styles */
